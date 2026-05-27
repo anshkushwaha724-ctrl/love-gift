@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Aryan & MinMin - Love Gift 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="welcome" class="screen active">
+            <div class="welcome-content">
+                <h1 class="title">💕 For MinMin 💕</h1>
+                <p class="subtitle">From Aryan with Love</p>
+                <div class="heart-animation">
+                    <span class="heart">❤️</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💕</span>
+                </div>
+                <button class="btn btn-primary" onclick="showScreen('countdown')">Start the Journey 📫</button>
+            </div>
+        </div>
+
+        <div id="countdown" class="screen">
+            <div class="countdown-content">
+                <h2>Our Special Journey Started On</h2>
+                <p class="special-date">September 26, 2024</p>
+                <div class="countdown-timer">
+                    <div class="countdown-box"><span id="days">0</span><p>Days</p></div>
+                    <div class="countdown-box"><span id="hours">0</span><p>Hours</p></div>
+                    <div class="countdown-box"><span id="minutes">0</span><p>Minutes</p></div>
+                    <div class="countdown-box"><span id="seconds">0</span><p>Seconds</p></div>
+                </div>
+                <button class="btn btn-primary" onclick="showScreen('games')">Next 🎮</button>
+            </div>
+        </div>
+
+        <div id="games" class="screen">
+            <div class="games-menu">
+                <h2>Let's Play Games! 🎮</h2>
+                <div class="games-grid">
+                    <div class="game-card" onclick="showScreen('memory')"><div class="game-icon">🧠</div><p>Memory Game</p></div>
+                    <div class="game-card" onclick="showScreen('escape')"><div class="game-icon">😉</div><p>Escape Button</p></div>
+                    <div class="game-card" onclick="showScreen('hearts')"><div class="game-icon">💖</div><p>Catch Hearts</p></div>
+                    <div class="game-card" onclick="showScreen('scratch')"><div class="game-icon">🎁</div><p>Scratch Card</p></div>
+                    <div class="game-card" onclick="showScreen('letter')"><div class="game-icon">💌</div><p>Love Letter</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="memory" class="screen">
+            <div class="game-container">
+                <h2>Memory Game 🧠</h2>
+                <p>Match the pairs!</p>
+                <div class="memory-grid" id="memoryGrid"></div>
+                <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
+            </div>
+        </div>
+
+        <div id="escape" class="screen">
+            <div class="game-container">
+                <h2>Catch Me If You Can! 😉</h2>
+                <p>Try to click the button!</p>
+                <button id="escapeBtn" class="escape-button" onclick="moveButton()">Click Me ❤️</button>
+                <p id="escapeCount" class="escape-count">Clicks: 0</p>
+                <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
+            </div>
+        </div>
+
+        <div id="hearts" class="screen">
+            <div class="game-container">
+                <h2>Catch The Hearts! 💖</h2>
+                <p>Click on the falling hearts!</p>
+                <div class="hearts-game"><canvas id="heartsCanvas"></canvas></div>
+                <p id="heartScore" class="score">Score: 0</p>
+                <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
+            </div>
+        </div>
+
+        <div id="scratch" class="screen">
+            <div class="game-container">
+                <h2>Scratch The Card! 🎁</h2>
+                <p>Scratch to reveal the surprise...</p>
+                <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+                <p id="scratchMessage" class="hidden-message">I Love You MinMin! 💕</p>
+                <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
+            </div>
+        </div>
+
+        <div id="letter" class="screen">
+            <div class="letter-container">
+                <div class="letter">
+                    <h2>Dear MinMin 💌</h2>
+                    <p class="letter-content">My dearest MinMin,<br><br>From the moment we met on September 26, 2024, you brought light into my world. Every moment with you is special, every laugh is precious, and every memory is something I cherish deeply.<br><br><span class="love-message">I Love You ❤️</span><br><br>These words might seem simple, but they carry all my feelings for you. You are my favorite person, my greatest joy, and my forever love.<br><br>Thank you for being you, for being with me, and for making every day an adventure worth living.<br><br>Forever yours,<br><strong>Aryan</strong> 💕</p>
+                </div>
+                <button class="btn btn-primary" onclick="celebrateLove()">Celebrate Our Love 🎉</button>
+                <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
