@@ -11,7 +11,7 @@ function showScreen(screenId) {
 }
 
 function updateCountdown() {
-    const startDate = new Date('2024-09-26').getTime();
+    const startDate = new Date('2026-08-26').getTime();
     const now = new Date().getTime();
     const diff = now - startDate;
     document.getElementById('days').textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
