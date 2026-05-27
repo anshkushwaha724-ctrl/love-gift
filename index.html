@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Aryan & MinMin - Love Gift 💕</title>
+    <title>💕 Yash & MinMin - Love Gift 💕</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
@@ -12,7 +12,7 @@
         <div id="welcome" class="screen active">
             <div class="welcome-content">
                 <h1 class="title">💕 For MinMin 💕</h1>
-                <p class="subtitle">From Aryan with Love</p>
+                <p class="subtitle">From Yash with Love</p>
                 <div class="heart-animation">
                     <span class="heart">❤️</span>
                     <span class="heart">💖</span>
@@ -25,14 +25,30 @@
         <div id="countdown" class="screen">
             <div class="countdown-content">
                 <h2>Our Special Journey Started On</h2>
-                <p class="special-date">September 26, 2024</p>
+                <p class="special-date">August 26, 2026</p>
                 <div class="countdown-timer">
                     <div class="countdown-box"><span id="days">0</span><p>Days</p></div>
                     <div class="countdown-box"><span id="hours">0</span><p>Hours</p></div>
                     <div class="countdown-box"><span id="minutes">0</span><p>Minutes</p></div>
                     <div class="countdown-box"><span id="seconds">0</span><p>Seconds</p></div>
                 </div>
-                <button class="btn btn-primary" onclick="showScreen('games')">Next 🎮</button>
+                <button class="btn btn-primary" onclick="showScreen('music')">🎵 Listen to Our Song 🎵</button>
+            </div>
+        </div>
+
+        <div id="music" class="screen">
+            <div class="music-container">
+                <h2>🎵 Tere Liye - Atif Aslam 🎵</h2>
+                <p class="music-subtitle">Our Song...</p>
+                <audio id="audioPlayer" controls style="width: 100%; max-width: 400px; margin: 30px 0;">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="music-lyrics">
+                    "Tere Liye Tere Liye"<br>
+                    🎶 Just like this song, I'm always there for you 🎶
+                </p>
+                <button class="btn btn-primary" onclick="showScreen('games')">Continue to Games 🎮</button>
             </div>
         </div>
 
@@ -92,7 +108,7 @@
             <div class="letter-container">
                 <div class="letter">
                     <h2>Dear MinMin 💌</h2>
-                    <p class="letter-content">My dearest MinMin,<br><br>From the moment we met on September 26, 2024, you brought light into my world. Every moment with you is special, every laugh is precious, and every memory is something I cherish deeply.<br><br><span class="love-message">I Love You ❤️</span><br><br>These words might seem simple, but they carry all my feelings for you. You are my favorite person, my greatest joy, and my forever love.<br><br>Thank you for being you, for being with me, and for making every day an adventure worth living.<br><br>Forever yours,<br><strong>Aryan</strong> 💕</p>
+                    <p class="letter-content">My dearest MinMin,<br><br>From the moment we met on August 26, 2026, you brought light into my world. Every moment with you is special, every laugh is precious, and every memory is something I cherish deeply.<br><br><span class="love-message">I Love You ❤️</span><br><br>These words might seem simple, but they carry all my feelings for you. You are my favorite person, my greatest joy, and my forever love. Just like the song "Tere Liye" - everything I do is for you.<br><br>Thank you for being you, for being with me, and for making every day an adventure worth living.<br><br>Forever yours,<br><strong>Yash</strong> 💕</p>
                 </div>
                 <button class="btn btn-primary" onclick="celebrateLove()">Celebrate Our Love 🎉</button>
                 <button class="btn btn-secondary" onclick="showScreen('games')">Back</button>
